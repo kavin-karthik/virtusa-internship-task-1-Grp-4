@@ -1,0 +1,18 @@
+import * as readline from "readline";
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter a string: ", (str) => {
+    let reversed = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed = reversed + str[i];
+    }
+
+    console.log("Reversed string: " + reversed);
+
+    rl.close();
+});
