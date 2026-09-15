@@ -21,6 +21,5 @@ rl.question("Enter first string: ", (first: string) => {
             console.log("Not Anagram");
         }
 
-        rl.close();
     });
 });
