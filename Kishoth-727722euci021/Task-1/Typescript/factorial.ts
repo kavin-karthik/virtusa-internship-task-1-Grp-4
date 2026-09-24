@@ -1,22 +1,10 @@
-declare var require: any;
-declare var process: any;
+let num: number = 5;
+let factorial: number = 1;
 
-const readline = require("readline");
+for (let i = 1; i <= num; i++)
+{
+    factorial = factorial * i;
+}
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-rl.question("Enter a number: ", (value: string) => {
-
-    let num = Number(value);
-    let fact = 1;
-
-    for (let i = 1; i <= num; i++) {
-        fact = fact * i;
-    }
-
-    console.log("Factorial: " + fact);
-
-});
+console.log("Number    : " + num);
+console.log("Factorial : " + factorial);
