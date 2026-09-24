@@ -1,0 +1,23 @@
+function add(a, b, c)
+{
+    if (arguments.length === 3)
+    {
+        console.log("Sum of 3 numbers = " + (a + b + c));
+    }
+    else if (arguments.length === 2)
+    {
+        console.log("Sum of 2 numbers = " + (a + b));
+    }
+    else if (arguments.length === 1)
+    {
+        console.log("Only one number = " + a);
+    }
+    else
+    {
+        console.log("No arguments passed");
+    }
+}
+
+add(10);
+add(10, 20);
+add(10, 20, 30);
