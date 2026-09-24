@@ -1,32 +1,15 @@
 
-let str: string = "Hello Kishoth";
+let str1: string = "listen";
+let str2: string = "silent";
 
-let vowels: number = 0;
-let consonants: number = 0;
+let s1 = str1.toLowerCase().split("").sort().join("");
+let s2 = str2.toLowerCase().split("").sort().join("");
 
-str = str.toLowerCase();
-
-for (let ch of str)
+if (s1 === s2)
 {
-    if (ch >= 'a' && ch <= 'z')
-    {
-        if (
-            ch === 'a' ||
-            ch === 'e' ||
-            ch === 'i' ||
-            ch === 'o' ||
-            ch === 'u'
-        )
-        {
-            vowels++;
-        }
-        else
-        {
-            consonants++;
-        }
-    }
+    console.log(str1 + " and " + str2 + " are Anagrams");
 }
-
-console.log("String      : " + str);
-console.log("Vowels      : " + vowels);
-console.log("Consonants  : " + consonants);
+else
+{
+    console.log(str1 + " and " + str2 + " are Not Anagrams");
+}
