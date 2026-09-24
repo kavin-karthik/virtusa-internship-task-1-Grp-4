@@ -1,25 +1,32 @@
-declare var require: any;
-declare var process: any;
 
-const readline = require("readline");
+let str: string = "Hello Kishoth";
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+let vowels: number = 0;
+let consonants: number = 0;
 
-rl.question("Enter first string: ", (first: string) => {
+str = str.toLowerCase();
 
-    rl.question("Enter second string: ", (second: string) => {
-
-        let word1 = first.toLowerCase().split("").sort().join("");
-        let word2 = second.toLowerCase().split("").sort().join("");
-
-        if (word1 == word2) {
-            console.log("Anagram");
-        } else {
-            console.log("Not Anagram");
+for (let ch of str)
+{
+    if (ch >= 'a' && ch <= 'z')
+    {
+        if (
+            ch === 'a' ||
+            ch === 'e' ||
+            ch === 'i' ||
+            ch === 'o' ||
+            ch === 'u'
+        )
+        {
+            vowels++;
         }
+        else
+        {
+            consonants++;
+        }
+    }
+}
 
-    });
-});
+console.log("String      : " + str);
+console.log("Vowels      : " + vowels);
+console.log("Consonants  : " + consonants);
