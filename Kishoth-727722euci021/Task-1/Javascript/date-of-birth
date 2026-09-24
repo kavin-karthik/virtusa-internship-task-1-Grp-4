@@ -1,0 +1,21 @@
+
+
+let dob = "2004-05-18";  
+
+let birthDate = new Date(dob);
+let today = new Date();
+
+let age = today.getFullYear() - birthDate.getFullYear();
+
+let monthDifference = today.getMonth() - birthDate.getMonth();
+
+if (
+    monthDifference < 0 ||
+    (monthDifference === 0 && today.getDate() < birthDate.getDate())
+)
+{
+    age--;
+}
+
+console.log("Date of Birth : " + dob);
+console.log("Age : " + age + " years");
