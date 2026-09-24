@@ -1,37 +1,32 @@
-declare var require: any;
-declare var process: any;
 
-const readline = require("readline");
+let str: string = "Hello Kishoth";
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+let vowels: number = 0;
+let consonants: number = 0;
 
-rl.question("Enter a string: ", (text: string) => {
+str = str.toLowerCase();
 
-    text = text.toLowerCase();
-
-    let vowels = 0;
-    let consonants = 0;
-
-    for (let ch of text) {
-        if (ch >= "a" && ch <= "z") {
-            if (
-                ch == "a" ||
-                ch == "e" ||
-                ch == "i" ||
-                ch == "o" ||
-                ch == "u"
-            ) {
-                vowels++;
-            } else {
-                consonants++;
-            }
+for (let ch of str)
+{
+    if (ch >= 'a' && ch <= 'z')
+    {
+        if (
+            ch === 'a' ||
+            ch === 'e' ||
+            ch === 'i' ||
+            ch === 'o' ||
+            ch === 'u'
+        )
+        {
+            vowels++;
+        }
+        else
+        {
+            consonants++;
         }
     }
+}
 
-    console.log("Vowels: " + vowels);
-    console.log("Consonants: " + consonants);
-
-});
+console.log("String      : " + str);
+console.log("Vowels      : " + vowels);
+console.log("Consonants  : " + consonants);
