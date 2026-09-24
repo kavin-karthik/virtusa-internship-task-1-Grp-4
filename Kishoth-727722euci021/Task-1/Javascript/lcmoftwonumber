@@ -1,0 +1,17 @@
+
+let num1 = 12;
+let num2 = 18;
+
+let max = (num1 > num2) ? num1 : num2;
+
+while (true)
+{
+    if (max % num1 === 0 && max % num2 === 0)
+    {
+        console.log("LCM = " + max);
+        break;
+    }
+
+    max++;
+}
+
